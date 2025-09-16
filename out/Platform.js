@@ -15,6 +15,7 @@ exports.Platform = {
     PS4: 'ps4',
     XboxOne: 'xboxone',
     Switch: 'switch',
+    Switch2: 'switch2',
     XboxScarlett: 'xboxscarlett',
     PS5: 'ps5'
 };

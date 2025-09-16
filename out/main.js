@@ -49,6 +49,8 @@ function fromPlatform(platform) {
             return 'Xbox One';
         case Platform_1.Platform.Switch:
             return 'Switch';
+        case Platform_1.Platform.Switch2:
+            return 'Switch2';
         case Platform_1.Platform.XboxScarlett:
             return 'Xbox Scarlett';
         case Platform_1.Platform.PS5:
@@ -292,7 +294,7 @@ async function exportKoremakeProject(from, to, platform, korefile, options) {
         exporter = new LinuxExporter_1.LinuxExporter();
     else if (platform === Platform_1.Platform.Tizen)
         exporter = new TizenExporter_1.TizenExporter();
-    else if (platform === Platform_1.Platform.PS4 || platform === Platform_1.Platform.XboxOne || platform === Platform_1.Platform.Switch || platform === Platform_1.Platform.XboxScarlett || platform === Platform_1.Platform.PS5) {
+    else if (platform === Platform_1.Platform.PS4 || platform === Platform_1.Platform.XboxOne || platform === Platform_1.Platform.Switch || platform === Platform_1.Platform.Switch2 || platform === Platform_1.Platform.XboxScarlett || platform === Platform_1.Platform.PS5) {
         let libsdir = path.join(from.toString(), 'Backends');
         if (fs.existsSync(libsdir) && fs.statSync(libsdir).isDirectory()) {
             let libdirs = fs.readdirSync(libsdir);

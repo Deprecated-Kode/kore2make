@@ -51,6 +51,8 @@ function fromPlatform(platform: string): string {
 			return 'Xbox One';
 		case Platform.Switch:
 			return 'Switch';
+		case Platform.Switch2:
+			return 'Switch2';
 		case Platform.XboxScarlett:
 			return 'Xbox Scarlett';
 		case Platform.PS5:
@@ -311,7 +313,7 @@ async function exportKoremakeProject(from: string, to: string, platform: string,
 	else if (platform === Platform.HTML5) exporter = new EmscriptenExporter();
 	else if (platform === Platform.Linux || platform === Platform.Pi) exporter = new LinuxExporter();
 	else if (platform === Platform.Tizen) exporter = new TizenExporter();
-	else if (platform === Platform.PS4 || platform === Platform.XboxOne || platform === Platform.Switch || platform === Platform.XboxScarlett || platform === Platform.PS5) {
+	else if (platform === Platform.PS4 || platform === Platform.XboxOne || platform === Platform.Switch || platform === Platform.Switch2 || platform === Platform.XboxScarlett || platform === Platform.PS5) {
 		let libsdir = path.join(from.toString(), 'Backends');
 		if (fs.existsSync(libsdir) && fs.statSync(libsdir).isDirectory()) {
 			let libdirs = fs.readdirSync(libsdir);

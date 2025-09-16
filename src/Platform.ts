@@ -12,6 +12,7 @@ export interface PlatformType {
 	PS4: string;
 	XboxOne: string;
 	Switch: string;
+	Switch2: string;
 	XboxScarlett: string;
 	PS5: string;
 }
@@ -30,6 +31,7 @@ export let Platform: PlatformType = {
 	PS4: 'ps4',
 	XboxOne: 'xboxone',
 	Switch: 'switch',
+	Switch2: 'switch2',
 	XboxScarlett: 'xboxscarlett',
 	PS5: 'ps5'
 };
